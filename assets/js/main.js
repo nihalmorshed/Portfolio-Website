@@ -11,22 +11,22 @@
 
 /*=============== SKILLS TABS ===============*/
 const tabs = document.querySelectorAll('[data-target]'),
-        tabContents = document.querySelectorAll('[data-content]');
+    tabContents = document.querySelectorAll('[data-content]');
 
-tabs.forEach(tab => { 
+tabs.forEach(tab => {
     tab.addEventListener('click', () => {
-    const target = document.querySelector(tab.dataset.target);
+        const target = document.querySelector(tab.dataset.target);
 
-    tabContents.forEach(tabContent => {
-        tabContent.classList.remove('skills__active');
-    });
-    target.classList.add('skills__active');
+        tabContents.forEach(tabContent => {
+            tabContent.classList.remove('skills__active');
+        });
+        target.classList.add('skills__active');
 
-    tabs.forEach(tab => {
-        tab.classList.remove('skills__active');
+        tabs.forEach(tab => {
+            tab.classList.remove('skills__active');
+        });
+        tab.classList.add('skills__active');
     });
-    tab.classList.add('skills__active');
-});
 });
 
 
@@ -44,15 +44,31 @@ let mixerPortfolio = mixitup('.work__container', {
 const linkWork = document.querySelectorAll('.work__item');
 
 function activeWork() {
-        linkWork.forEach(l => l.classList.remove('active-work'));
-        this.classList.add('active-work');
-    
+    linkWork.forEach(l => l.classList.remove('active-work'));
+    this.classList.add('active-work');
+
 }
 linkWork.forEach(l => l.addEventListener('click', activeWork));
 
 /*===== Work Popup =====*/
+document.addEventListener('click', e => {
+    if (e.target.classList.contains('work__button')) {
+        togglePortfolioPopup();
+        portfolioItemDetails(e.target.parentElement);
+    }
+})
 
+function portfolioItemDetails(portfolioItem) {
+    document.querySelector('.pp__thumbnail img').src = portfolioItem.querySelector('.work__img').src;
+    document.querySelector('.portfolio__popup-subtitle span').innerHTML = portfolioItem.querySelector('.work__title').innerHTML;
+    document.querySelector('.portfolio__popup-body').innerHTML = portfolioItem.querySelector('.portfolio__item-details').innerHTML;
+    
+    }
 
+function togglePortfolioPopup() {
+    document.querySelector('.portfolio__popup').classList.toggle('open');
+}
+document.querySelector('.portfolio__popup-close').addEventListener('click', togglePortfolioPopup);
 /*=============== SERVICES MODAL ===============*/
 
 
