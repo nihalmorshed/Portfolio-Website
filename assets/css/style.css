@@ -836,7 +836,14 @@ input {
     text-transform: lowercase;
     color: var(--skin-color);
 }
+
 /* Active Modal*/
+
+.active-modal{
+    opacity: 1;
+    visibility: visible;
+}
+
 
 
 /*===== Testimonial Section =====*/
