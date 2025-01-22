@@ -708,6 +708,56 @@ input {
     transition: .4s;
 }
 
+.services__modal-content{
+    width: 500px;
+    background-color: var(--box-color);
+    position: relative;
+    padding: 4.5rem 2.5rem 2.5rem;
+    border-radius: 0.5rem;
+
+}
+
+.services__modal-close{
+    position: absolute;
+    top: 1.5rem;
+    right: 1.5rem;
+    font-size: 1.5rem;
+    color: var(--skin-color);
+    cursor: pointer;
+}
+
+.services__modal-title,
+.services__modal-description{
+    text-align: center;
+}
+
+.services__modal-title{
+    font-size: var(--h3-font-size);
+    font-weight: var(--font-medium);
+    margin-bottom: var(--mb-1);
+}
+
+.services__modal-description{
+    font-size: var(--small-font-size);
+    margin-bottom: var(--mb-2);
+    padding: 0 3.5rem;
+}
+
+.services__modal-service{
+    display: flex;
+    align-items: center;
+    column-gap: .5rem;
+    margin-bottom: var(--mb-0-75);
+}
+
+.services__modal-icon{
+    font-size: 1.2rem;
+    color: var(--skin-color);
+}
+
+.services__modal-info{
+    font-size: var(--small-font-size);
+}
 /* Portfolio Popup */
 
 .portfolio__popup{
