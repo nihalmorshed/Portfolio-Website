@@ -94,7 +94,24 @@ modalCloses.forEach((modalClose) => {
 
 
 /*=============== SWIPER TESTIMONIAL ===============*/
-
+var swiper = new Swiper(".testimonials__container", {
+    loop: true,
+    grabCursor: true,
+    spaceBetween: 24,
+    pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+    },
+    breakpoints: {
+        576: {
+            slidesPerView: 2,
+        },
+        768: {
+            slidesPerView: 2,
+            spaceBetween: 48,
+        },
+    }
+});
 
 /*=============== INPUT ANIMATION ===============*/
 
