@@ -154,22 +154,22 @@ const sections = document.querySelectorAll("section[id]");
 window.addEventListener("scroll", navHighlighter);
 
 
-function navHighlighter()
-{
-	let scrollY = window.pageYOffset;
-	sections.forEach(current => {
-		const sectionHeight = current.offsetHeight;
-		const sectionTop = current.offsetTop - 50,
-		sectionID = current.getAttribute("id");
-		if(scrollY > sectionTop && scrollY <= sectionTop + sectionHeight)
-		{
-			document.querySelector('.nav__menu a[href*=' + sectionID + ']').classList.add("active-link")
-		}
-		else
-		{
-			document.querySelector('.nav__menu a[href*=' + sectionID + ']').classList.remove("active-link")
-		 }
-	})
+function navHighlighter() {
+    let scrollY = window.pageYOffset;
+    sections.forEach(current => {
+        const sectionHeight = current.offsetHeight;
+        const sectionTop = current.offsetTop - 50;
+        const sectionID = current.getAttribute("id");
+        
+        // Fix: Use querySelector with exact matching
+        const navLink = document.querySelector(`.nav__menu a[href="#${sectionID}"]`);
+        
+        if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
+            navLink?.classList.add("active-link");
+        } else {
+            navLink?.classList.remove("active-link");
+        }
+    });
 }
 
 /*=============== SHOW SCROLL UP ===============*/
