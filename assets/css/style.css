@@ -1271,6 +1271,24 @@ textarea.input {
         grid-template-columns: 300px;
         row-gap: 3rem;
     }
+
+    .work__container {
+        grid-template-columns: 330px;
+    }
+
+    .services__container {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
+    }
+    .services__content {
+        padding: 3.5rem 0.5rem 1.25rem 1.5rem;
+    }
+
+    .services__icon {
+        font-size: 1.5rem;
+    }
+
+
     .contact__container {
         grid-template-columns: 360px;
         row-gap: 3rem; 
@@ -1293,6 +1311,24 @@ textarea.input {
     .footer__copy {
         margin-top: var(--mb-3);
     }
+
+    .portfolio__popup-inner {
+        width: 420px;
+        padding: 2.8rem 1.5rem 2.5rem;
+    }
+
+    .portfolio__popup-content {
+        grid-template-columns: 1fr;
+        row-gap: 1.6rem;
+    }
+
+    .details__title {
+        font-size: var(--normal-font-size);
+    }
+
+    .portfolio__popup-close {
+        top: .5rem;
+     }
 
 
 }
@@ -1343,7 +1379,17 @@ textarea.input {
     .about__description {
         padding: 0;
     }
-    .contact__container {
+
+    .services__modal-description {
+        padding: 0 ;
+    }
+
+    .work__container {
+        grid-template-columns: 300px;
+    }
+
+    .contact__container,
+    .work__container {
         grid-template-columns: 300px;
     }
     .footer__container {
