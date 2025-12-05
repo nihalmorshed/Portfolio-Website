@@ -4,6 +4,25 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Nihal Morshed - AI/ML Engineer and Full-Stack Developer specializing in Natural Language Processing, Deep Learning, and modern web technologies. IEEE published researcher from RUET." />
+    <meta name="keywords" content="Nihal Morshed, AI Engineer, Machine Learning, NLP, Full Stack Developer, Python, React, Deep Learning, Transformer Models, IEEE Research" />
+    <meta name="author" content="Nihal Morshed" />
+
+    <!-- Open Graph Meta Tags for Social Sharing -->
+    <meta property="og:title" content="Nihal Morshed - AI/ML Engineer & Full-Stack Developer" />
+    <meta property="og:description" content="Computer Science graduate specializing in Machine Learning, NLP, and Full-Stack Development. Published IEEE researcher with expertise in transformer models and deep learning." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://nihalmorshed.github.io/" />
+    <meta property="og:image" content="https://nihalmorshed.github.io/assets/img/Portfolio.png" />
+
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Nihal Morshed - AI/ML Engineer & Full-Stack Developer" />
+    <meta name="twitter:description" content="Computer Science graduate specializing in Machine Learning, NLP, and Full-Stack Development." />
+    <meta name="twitter:image" content="https://nihalmorshed.github.io/assets/img/Portfolio.png" />
+
     <!--========== UNICONS ==========-->
     <link
       rel="stylesheet"
@@ -19,10 +38,13 @@
     <!--========== SWIPER CSS ==========-->
     <link rel="stylesheet" href="assets/css/swiper-bundle.min.css" />
 
+    <!--========== AOS CSS ==========-->
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
+
     <!--========== MAIN CSS ==========-->
     <link rel="stylesheet" href="assets/css/style.css" />
 
-    <title>Responsive portfolio website</title>
+    <title>Nihal Morshed - AI/ML Engineer & Full-Stack Developer | Portfolio</title>
   </head>
 
   <body>
@@ -49,6 +71,9 @@
                 <a href="#qualification" class="nav__link"> Qualification</a>
               </li>
               <li class="nav__item">
+                <a href="#problemsolving" class="nav__link"> Problem Solving</a>
+              </li>
+              <li class="nav__item">
                 <a href="#work" class="nav__link"> Work</a>
               </li>
               <li class="nav__item">
@@ -56,6 +81,9 @@
               </li>
               <li class="nav__item">
                 <a href="#publications" class="nav__link"> Publications</a>
+              </li>
+              <li class="nav__item">
+                <a href="#certifications" class="nav__link"> Certifications</a>
               </li>
               <li class="nav__item">
                 <a href="#contact" class="nav__link"> Contact</a>
@@ -145,33 +173,33 @@
 
       <!--===== About =====-->
       <section class="about section" id="about">
-        <h2 data-heading="My Intro" class="section__title">About me</h2>
-        <div class="about__container container grid">
+        <h2 data-heading="My Intro" class="section__title" data-aos="fade-up">About me</h2>
+        <div class="about__container container grid" data-aos="fade-up" data-aos-delay="200">
           <img src="assets/img/about-img.png" alt="" class="about__img" />
           <div class="about__data">
             <h3 class="about__heading">
               Hi, I'm Nihal Morshed, Based in Bangladesh.
             </h3>
             <p class="about__description">
-              I am a Frontend Developer with 2 years of experience in web
-              development. I am skilled in HTML, CSS, JavaScript, React, and
-              WordPress. I have a strong foundation in programming logic and
-              problem-solving. I am passionate about creating beautiful and
-              functional websites that help businesses grow.
+              I am a Computer Science graduate from RUET specializing in Machine Learning, Natural Language Processing, and Full-Stack Development. With published research in IEEE conferences and extensive experience in transformer models, deep learning, and modern web technologies, I bridge the gap between cutting-edge AI research and practical software engineering. Currently working as an Associate Software Engineer at Nifty Coders, I'm passionate about leveraging AI to solve real-world problems.
             </p>
             <div class="about__info grid">
-              
-
               <div class="about__box">
-                <i class="uil uil-briefcase-alt about__icon"></i>
-                <h3 class="about__title">Completed</h3>
-                <span class="about__subtitle">48+ Projects</span>
+                <i class="uil uil-file-alt about__icon"></i>
+                <h3 class="about__title">Research</h3>
+                <span class="about__subtitle">IEEE Published</span>
               </div>
 
               <div class="about__box">
-                <i class="uil uil-headphones-alt about__icon"></i>
-                <h3 class="about__title">Support</h3>
-                <span class="about__subtitle">Online 24/7</span>
+                <i class="uil uil-code-branch about__icon"></i>
+                <h3 class="about__title">Problems Solved</h3>
+                <span class="about__subtitle">260+ Challenges</span>
+              </div>
+
+              <div class="about__box">
+                <i class="uil uil-award about__icon"></i>
+                <h3 class="about__title">Certifications</h3>
+                <span class="about__subtitle">10+ Completed</span>
               </div>
             </div>
             <a href="#contact" class="button">
@@ -195,8 +223,8 @@
               <div class="timeline__item">
                 <div class="circle__dot"></div>
                 <h3 class="timeline__title">
-                  Rajshahi University of Engineering & Technology <br />
-                  (RUET, Rajshahi, Bangladesh)
+                  Rajshahi University of Engineering & Technology (RUET)<br />
+                  (Rajshahi, Bangladesh)
                 </h3>
                 <p class="timeline__text">
                   Bachelor of Science in Computer Science
@@ -257,25 +285,25 @@
 
       <!--===== Skills =====-->
       <section class="skills section" id="skills">
-        <h2 data-heading="My Abiilites" class="section__title">
+        <h2 data-heading="My Abiilites" class="section__title" data-aos="fade-up">
           My Experiences
         </h2>
-        <div class="skills__container container grid">
+        <div class="skills__container container grid" data-aos="fade-up" data-aos-delay="200">
           <div class="skills__tabs">
             <div class="skills__header skills__active" data-target="#languages">
               <i class="uil uil-brackets-curly skills__icon"></i>
               <div>
-                <h1 class="skills__title">Programming Language</h1>
-                <span class="skills__subtitle">More than 6 months</span>
+                <h1 class="skills__title">Programming Languages</h1>
+                <span class="skills__subtitle">Core Languages</span>
               </div>
               <i class="uil uil-angle-down skills__arrow"></i>
             </div>
 
-            <div class="skills__header" data-target="#console">
-              <i class="bx bxs-terminal skills__icon"></i>
+            <div class="skills__header" data-target="#research">
+              <i class="uil uil-brain skills__icon"></i>
               <div>
-                <h1 class="skills__title">Console & Version Control</h1>
-                <span class="skills__subtitle">More than 6 months</span>
+                <h1 class="skills__title">Specialized Research Areas</h1>
+                <span class="skills__subtitle">AI & Data Science</span>
               </div>
               <i class="uil uil-angle-down skills__arrow"></i>
             </div>
@@ -283,8 +311,8 @@
             <div class="skills__header" data-target="#backend">
               <i class="uil uil-server skills__icon"></i>
               <div>
-                <h1 class="skills__title">Backend and Database</h1>
-                <span class="skills__subtitle">More than 1 years</span>
+                <h1 class="skills__title">Database & Cloud</h1>
+                <span class="skills__subtitle">Backend Technologies</span>
               </div>
               <i class="uil uil-angle-down skills__arrow"></i>
             </div>
@@ -292,8 +320,8 @@
             <div class="skills__header" data-target="#frameworks">
               <i class="bx bxs-component skills__icon"></i>
               <div>
-                <h1 class="skills__title">Frameworks</h1>
-                <span class="skills__subtitle">More than 6 months</span>
+                <h1 class="skills__title">Frameworks & Technologies</h1>
+                <span class="skills__subtitle">Development Tools</span>
               </div>
               <i class="uil uil-angle-down skills__arrow"></i>
             </div>
@@ -305,16 +333,47 @@
               <div class="skills__list grid">
                 <div class="skills__data">
                   <div class="skills__titles">
-                    <h3 class="skills__name">C++</h3>
-                    <span class="skills__number">70%</span>
+                    <h3 class="skills__name">Python</h3>
+                    <span class="skills__number">90%</span>
                   </div>
                   <div class="skills__bar">
-                    <span class="skills__percentage" style="width: 70%"></span>
+                    <span class="skills__percentage" style="width: 90%"></span>
                   </div>
                 </div>
+
                 <div class="skills__data">
                   <div class="skills__titles">
-                    <h3 class="skills__name">C</h3>
+                    <h3 class="skills__name">TypeScript</h3>
+                    <span class="skills__number">80%</span>
+                  </div>
+                  <div class="skills__bar">
+                    <span class="skills__percentage" style="width: 80%"></span>
+                  </div>
+                </div>
+
+                <div class="skills__data">
+                  <div class="skills__titles">
+                    <h3 class="skills__name">JavaScript</h3>
+                    <span class="skills__number">85%</span>
+                  </div>
+                  <div class="skills__bar">
+                    <span class="skills__percentage" style="width: 85%"></span>
+                  </div>
+                </div>
+
+                <div class="skills__data">
+                  <div class="skills__titles">
+                    <h3 class="skills__name">C#</h3>
+                    <span class="skills__number">75%</span>
+                  </div>
+                  <div class="skills__bar">
+                    <span class="skills__percentage" style="width: 75%"></span>
+                  </div>
+                </div>
+
+                <div class="skills__data">
+                  <div class="skills__titles">
+                    <h3 class="skills__name">C++</h3>
                     <span class="skills__number">70%</span>
                   </div>
                   <div class="skills__bar">
@@ -324,21 +383,31 @@
 
                 <div class="skills__data">
                   <div class="skills__titles">
-                    <h3 class="skills__name">JavaScript</h3>
+                    <h3 class="skills__name">Java</h3>
                     <span class="skills__number">70%</span>
                   </div>
                   <div class="skills__bar">
                     <span class="skills__percentage" style="width: 70%"></span>
                   </div>
                 </div>
-                
+
                 <div class="skills__data">
                   <div class="skills__titles">
-                    <h3 class="skills__name">Python</h3>
+                    <h3 class="skills__name">Dart</h3>
+                    <span class="skills__number">75%</span>
+                  </div>
+                  <div class="skills__bar">
+                    <span class="skills__percentage" style="width: 75%"></span>
+                  </div>
+                </div>
+
+                <div class="skills__data">
+                  <div class="skills__titles">
+                    <h3 class="skills__name">SQL</h3>
                     <span class="skills__number">80%</span>
                   </div>
                   <div class="skills__bar">
-                    <span class="skills__percentage" style="width: 85%"></span>
+                    <span class="skills__percentage" style="width: 80%"></span>
                   </div>
                 </div>
 
@@ -348,7 +417,7 @@
                     <span class="skills__number">90%</span>
                   </div>
                   <div class="skills__bar">
-                    <span class="skills__percentage" style="width: 85%"></span>
+                    <span class="skills__percentage" style="width: 90%"></span>
                   </div>
                 </div>
 
@@ -365,62 +434,62 @@
               </div>
             </div>
 
-            <div class="skills__group" data-content id="console">
+            <div class="skills__group" data-content id="research">
               <div class="skills__list grid">
                 <div class="skills__data">
                   <div class="skills__titles">
-                    <h3 class="skills__name">Shell Script</h3>
-                    <span class="skills__number">70%</span>
+                    <h3 class="skills__name">Deep Learning</h3>
+                    <span class="skills__number">85%</span>
                   </div>
                   <div class="skills__bar">
-                    <span class="skills__percentage" style="width: 70%"></span>
+                    <span class="skills__percentage" style="width: 85%"></span>
                   </div>
                 </div>
 
                 <div class="skills__data">
                   <div class="skills__titles">
-                    <h3 class="skills__name">GitHub</h3>
-                    <span class="skills__number">80%</span>
+                    <h3 class="skills__name">Natural Language Processing</h3>
+                    <span class="skills__number">90%</span>
                   </div>
                   <div class="skills__bar">
-                    <span class="skills__percentage" style="width: 80%"></span>
+                    <span class="skills__percentage" style="width: 90%"></span>
                   </div>
                 </div>
 
                 <div class="skills__data">
                   <div class="skills__titles">
-                    <h3 class="skills__name">Assembly Language</h3>
-                    <span class="skills__number">40%</span>
+                    <h3 class="skills__name">Data Analysis</h3>
+                    <span class="skills__number">85%</span>
                   </div>
                   <div class="skills__bar">
-                    <span class="skills__percentage" style="width: 40%"></span>
+                    <span class="skills__percentage" style="width: 85%"></span>
                   </div>
                 </div>
 
-                
+
               </div>
             </div>
 
             <div class="skills__group" data-content id="backend">
               <div class="skills__list grid">
-                
+
                 <div class="skills__data">
                   <div class="skills__titles">
-                    <h3 class="skills__name">MySQL</h3>
-                    <span class="skills__number">80%</span>
+                    <h3 class="skills__name">PostgreSQL</h3>
+                    <span class="skills__number">85%</span>
                   </div>
                   <div class="skills__bar">
-                    <span class="skills__percentage" style="width: 80%"></span>
+                    <span class="skills__percentage" style="width: 85%"></span>
                   </div>
                 </div>
 
                 <div class="skills__data">
                   <div class="skills__titles">
-                    <h3 class="skills__name">Firebase</h3>
-                    <span class="skills__number">70%</span>
+                    <h3 class="skills__name">AWS</h3>
+                    <span class="skills__number">75%</span>
                   </div>
                   <div class="skills__bar">
-                    <span class="skills__percentage" style="width: 70%"></span>
+                    <span class="skills__percentage" style="width: 75%"></span>
                   </div>
                 </div>
               </div>
@@ -430,7 +499,47 @@
               <div class="skills__list grid">
                 <div class="skills__data">
                   <div class="skills__titles">
+                    <h3 class="skills__name">LangGraph</h3>
+                    <span class="skills__number">80%</span>
+                  </div>
+                  <div class="skills__bar">
+                    <span class="skills__percentage" style="width: 80%"></span>
+                  </div>
+                </div>
+
+                <div class="skills__data">
+                  <div class="skills__titles">
+                    <h3 class="skills__name">LangChain</h3>
+                    <span class="skills__number">85%</span>
+                  </div>
+                  <div class="skills__bar">
+                    <span class="skills__percentage" style="width: 85%"></span>
+                  </div>
+                </div>
+
+                <div class="skills__data">
+                  <div class="skills__titles">
+                    <h3 class="skills__name">React Native</h3>
+                    <span class="skills__number">75%</span>
+                  </div>
+                  <div class="skills__bar">
+                    <span class="skills__percentage" style="width: 75%"></span>
+                  </div>
+                </div>
+
+                <div class="skills__data">
+                  <div class="skills__titles">
                     <h3 class="skills__name">Flutter</h3>
+                    <span class="skills__number">80%</span>
+                  </div>
+                  <div class="skills__bar">
+                    <span class="skills__percentage" style="width: 80%"></span>
+                  </div>
+                </div>
+
+                <div class="skills__data">
+                  <div class="skills__titles">
+                    <h3 class="skills__name">Django</h3>
                     <span class="skills__number">70%</span>
                   </div>
                   <div class="skills__bar">
@@ -438,28 +547,16 @@
                   </div>
                 </div>
 
-
                 <div class="skills__data">
                   <div class="skills__titles">
-                    <h3 class="skills__name">Django</h3>
-                    <span class="skills__number">60%</span>
+                    <h3 class="skills__name">ASP.NET Core</h3>
+                    <span class="skills__number">75%</span>
                   </div>
                   <div class="skills__bar">
-                    <span class="skills__percentage" style="width: 60%"></span>
+                    <span class="skills__percentage" style="width: 75%"></span>
                   </div>
                 </div>
 
-                <div class="skills__data">
-                  <div class="skills__titles">
-                    <h3 class="skills__name">Bootstrap</h3>
-                    <span class="skills__number">55%</span>
-                  </div>
-                  <div class="skills__bar">
-                    <span class="skills__percentage" style="width: 55%"></span>
-                  </div>
-                </div>
-
-                
               </div>
             </div>
 
@@ -467,37 +564,121 @@
         </div>
       </section>
 
+      <!--===== Problem Solving =====-->
+      <section class="problemsolving section" id="problemsolving">
+        <h2 data-heading="Competitive Programming" class="section__title">Problem Solving</h2>
+
+        <div class="problemsolving__container container grid">
+          <div class="problemsolving__card">
+            <div class="problemsolving__header">
+              <i class="uil uil-brackets-curly problemsolving__icon"></i>
+              <div class="problemsolving__badge">
+                <span class="problemsolving__platform">LeetCode</span>
+              </div>
+            </div>
+            <div class="problemsolving__content">
+              <h3 class="problemsolving__username">@nilumorshed</h3>
+              <div class="problemsolving__stats">
+                <div class="problemsolving__stat-item">
+                  <i class="uil uil-check-circle"></i>
+                  <div>
+                    <h4>110+</h4>
+                    <span>Problems Solved</span>
+                  </div>
+                </div>
+                <div class="problemsolving__stat-item">
+                  <i class="uil uil-trophy"></i>
+                  <div>
+                    <h4>Medium & Hard</h4>
+                    <span>Focus Areas</span>
+                  </div>
+                </div>
+              </div>
+              <div class="problemsolving__specialization">
+                <h4>Specializations:</h4>
+                <div class="problemsolving__tags">
+                  <span class="problemsolving__tag">Array</span>
+                  <span class="problemsolving__tag">Hashing</span>
+                  <span class="problemsolving__tag">Linked List</span>
+                  <span class="problemsolving__tag">Two Pointers</span>
+                </div>
+              </div>
+              <a href="https://leetcode.com/nilumorshed" target="_blank" class="problemsolving__link">
+                View Profile
+                <i class="uil uil-external-link-alt"></i>
+              </a>
+            </div>
+          </div>
+
+          <div class="problemsolving__card">
+            <div class="problemsolving__header">
+              <i class="uil uil-code-branch problemsolving__icon"></i>
+              <div class="problemsolving__badge codeforces">
+                <span class="problemsolving__platform">Codeforces</span>
+              </div>
+            </div>
+            <div class="problemsolving__content">
+              <h3 class="problemsolving__username">@CaptainNimo</h3>
+              <div class="problemsolving__stats">
+                <div class="problemsolving__stat-item">
+                  <i class="uil uil-check-circle"></i>
+                  <div>
+                    <h4>150+</h4>
+                    <span>Problems Solved</span>
+                  </div>
+                </div>
+                <div class="problemsolving__stat-item">
+                  <i class="uil uil-star"></i>
+                  <div>
+                    <h4>389</h4>
+                    <span>Rating</span>
+                  </div>
+                </div>
+              </div>
+              <div class="problemsolving__status">
+                <div class="problemsolving__rank">
+                  <i class="uil uil-award"></i>
+                  <span>Pupil Status</span>
+                </div>
+              </div>
+              <a href="https://codeforces.com/profile/CaptainNimo" target="_blank" class="problemsolving__link">
+                View Profile
+                <i class="uil uil-external-link-alt"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <!--===== Work =====-->
       <section class="work section" id="work">
-        <h2 data-heading="My Portfolio" class="section__title">Recent Works</h2>
+        <h2 data-heading="ML & AI Projects" class="section__title" data-aos="fade-up">Project Portfolio</h2>
 
-        <div class="work__filters">
+        <div class="work__filters" data-aos="fade-up" data-aos-delay="100">
           <span class="work__item active-work" data-filter="all">All</span>
-          <span class="work__item" data-filter=".web">Web Design</span>
-          <span class="work__item" data-filter=".app">Mobile App</span>
-          <span class="work__item" data-filter=".design">Design</span>
+          <span class="work__item" data-filter=".nlp">NLP</span>
+          <span class="work__item" data-filter=".cv">Computer Vision</span>
+          <span class="work__item" data-filter=".ml">Predictive ML</span>
         </div>
 
         <div class="work__container container grid">
-          <div class="work__card mix web">
+          <!-- NLP Project 1 -->
+          <div class="work__card mix nlp">
             <img src="assets/img/work-1.webp" alt="" class="work__img" />
-            <h3 class="work__title">Web Design</h3>
+            <h3 class="work__title">Sentiment Analysis</h3>
             <span class="work__button"
-              >Demo
+              >Details
               <i class="uil uil-arrow-right work__button-icon"></i>
             </span>
             <div class="portfolio__item-details">
-              <h3 class="details__title">Web Designed for infotainment</h3>
+              <h3 class="details__title">Sentiment Analysis Using DistilBERT Transformer Model</h3>
               <p class="details__description">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Consequuntur, explicabo repudiandae perspiciatis totam odit quo
-                asperiores sit expedita facilis? Ab provident quis commodi at
-                quo, exercitationem delectus itaque a repellat.
+                Developed a sentiment analysis model achieving 94.86% ROC AUC and 92.86% F1 Score on the Twitter Airline Sentiment dataset. Fine-tuned pre-trained model using PyTorch and Hugging Face Transformers with optimized data pipeline processing thousands of tweets.
               </p>
               <ul class="details__info">
-                <li>Created - <span>4 Dec 2020</span></li>
-                <li>Technologies - <span>HTML, CSS</span></li>
-                <li>Role - <span>Frontend</span></li>
+                <li>Date - <span>July 2024</span></li>
+                <li>Technologies - <span>PyTorch, Hugging Face, DistilBERT</span></li>
+                <li>Category - <span>Natural Language Processing</span></li>
                 <li>
                   View -
                   <a
@@ -511,25 +692,23 @@
             </div>
           </div>
 
-          <div class="work__card mix app">
+          <!-- NLP Project 2 -->
+          <div class="work__card mix nlp">
             <img src="assets/img/work-2.webp" alt="" class="work__img" />
-            <h3 class="work__title">Android App Design</h3>
+            <h3 class="work__title">LLM Tokenizer</h3>
             <span class="work__button"
-              >Demo
+              >Details
               <i class="uil uil-arrow-right work__button-icon"></i>
             </span>
             <div class="portfolio__item-details">
-              <h3 class="details__title">Mobile App designed for easy fun</h3>
+              <h3 class="details__title">Basic Tokenizer for Large Language Models</h3>
               <p class="details__description">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Consequuntur, explicabo repudiandae perspiciatis totam odit quo
-                asperiores sit expedita facilis? Ab provident quis commodi at
-                quo, exercitationem delectus itaque a repellat.
+                Developed a fundamental tokenization system for typical LLM applications. Built from scratch to understand core tokenization principles used in modern language models.
               </p>
               <ul class="details__info">
-                <li>Created - <span>4 Dec 2020</span></li>
-                <li>Technologies - <span>HTML, CSS</span></li>
-                <li>Role - <span>Frontend</span></li>
+                <li>Date - <span>December 2024 - January 2025</span></li>
+                <li>Technologies - <span>Python, NLP</span></li>
+                <li>Category - <span>Natural Language Processing</span></li>
                 <li>
                   View -
                   <a
@@ -543,27 +722,23 @@
             </div>
           </div>
 
-          <div class="work__card mix web">
+          <!-- NLP Project 3 -->
+          <div class="work__card mix nlp">
             <img src="assets/img/work-3.webp" alt="" class="work__img" />
-            <h3 class="work__title">Web Design</h3>
+            <h3 class="work__title">Article Spinner</h3>
             <span class="work__button"
-              >Demo
+              >Details
               <i class="uil uil-arrow-right work__button-icon"></i>
             </span>
             <div class="portfolio__item-details">
-              <h3 class="details__title">
-                WebSite Designed for portfolio display
-              </h3>
+              <h3 class="details__title">Article Spinner Using Second Order Markov Model</h3>
               <p class="details__description">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Consequuntur, explicabo repudiandae perspiciatis totam odit quo
-                asperiores sit expedita facilis? Ab provident quis commodi at
-                quo, exercitationem delectus itaque a repellat.
+                Created sophisticated article spinner utilizing second-order Markov Model and advanced NLP techniques. Employed NLTK for tokenization and TreebankWordDetokenizer for grammatically accurate sentence reconstruction while analyzing the BBC Text Classification Dataset.
               </p>
               <ul class="details__info">
-                <li>Created - <span>4 Dec 2020</span></li>
-                <li>Technologies - <span>HTML, CSS</span></li>
-                <li>Role - <span>Frontend</span></li>
+                <li>Date - <span>August-September 2024</span></li>
+                <li>Technologies - <span>Python, NLTK, Markov Models</span></li>
+                <li>Category - <span>Natural Language Processing</span></li>
                 <li>
                   View -
                   <a
@@ -577,27 +752,23 @@
             </div>
           </div>
 
-          <div class="work__card mix app">
+          <!-- NLP Project 4 -->
+          <div class="work__card mix nlp">
             <img src="assets/img/work-4.webp" alt="" class="work__img" />
-            <h3 class="work__title">Android Application Design</h3>
+            <h3 class="work__title">Movie Recommender</h3>
             <span class="work__button"
-              >Demo
+              >Details
               <i class="uil uil-arrow-right work__button-icon"></i>
             </span>
             <div class="portfolio__item-details">
-              <h3 class="details__title">
-                Application developed for weather tracking
-              </h3>
+              <h3 class="details__title">TF-IDF Movie Recommender System</h3>
               <p class="details__description">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Consequuntur, explicabo repudiandae perspiciatis totam odit quo
-                asperiores sit expedita facilis? Ab provident quis commodi at
-                quo, exercitationem delectus itaque a repellat.
+                Developed a TF-IDF model from scratch and created a comprehensive movie recommender system using TF-IDF vectorization on the TMDB 5000 dataset, implementing cosine similarity for accurate content matching.
               </p>
               <ul class="details__info">
-                <li>Created - <span>4 Dec 2020</span></li>
-                <li>Technologies - <span>HTML, CSS</span></li>
-                <li>Role - <span>Frontend</span></li>
+                <li>Date - <span>2024</span></li>
+                <li>Technologies - <span>Python, TF-IDF, scikit-learn</span></li>
+                <li>Category - <span>Natural Language Processing</span></li>
                 <li>
                   View -
                   <a
@@ -611,25 +782,23 @@
             </div>
           </div>
 
-          <div class="work__card mix design">
+          <!-- NLP Project 5 -->
+          <div class="work__card mix nlp">
             <img src="assets/img/work-5.webp" alt="" class="work__img" />
-            <h3 class="work__title">Web Design</h3>
+            <h3 class="work__title">Poetry Generator</h3>
             <span class="work__button"
-              >Demo
+              >Details
               <i class="uil uil-arrow-right work__button-icon"></i>
             </span>
             <div class="portfolio__item-details">
-              <h3 class="details__title">Landing Page developed for fun</h3>
+              <h3 class="details__title">Poetry Generation and Classification Systems</h3>
               <p class="details__description">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Consequuntur, explicabo repudiandae perspiciatis totam odit quo
-                asperiores sit expedita facilis? Ab provident quis commodi at
-                quo, exercitationem delectus itaque a repellat.
+                Built a Markov Model Classifier and Poetry Generator using both first and second-order Markov Models, demonstrating versatility in text generation and classification tasks.
               </p>
               <ul class="details__info">
-                <li>Created - <span>4 Dec 2020</span></li>
-                <li>Technologies - <span>HTML, CSS</span></li>
-                <li>Role - <span>Frontend</span></li>
+                <li>Date - <span>2024</span></li>
+                <li>Technologies - <span>Python, Markov Models, NLP</span></li>
+                <li>Category - <span>Natural Language Processing</span></li>
                 <li>
                   View -
                   <a
@@ -643,27 +812,113 @@
             </div>
           </div>
 
-          <div class="work__card mix app">
+          <!-- CV Project 1 -->
+          <div class="work__card mix cv">
             <img src="assets/img/work-6.webp" alt="" class="work__img" />
-            <h3 class="work__title">Android App Design</h3>
+            <h3 class="work__title">PawVision CNN</h3>
             <span class="work__button"
-              >Demo
+              >Details
               <i class="uil uil-arrow-right work__button-icon"></i>
             </span>
             <div class="portfolio__item-details">
-              <h3 class="details__title">
-                Application developed for Bitcoin tracking
-              </h3>
+              <h3 class="details__title">PawVision: CNN-Powered Image Recognition Model</h3>
               <p class="details__description">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Consequuntur, explicabo repudiandae perspiciatis totam odit quo
-                asperiores sit expedita facilis? Ab provident quis commodi at
-                quo, exercitationem delectus itaque a repellat.
+                Constructed a CNN model using TensorFlow/Keras, achieving 90.81% accuracy in cat/dog image classification. Implemented sophisticated data augmentation techniques, including rescaling, shearing, zooming, and flipping, to improve generalization and prevent overfitting.
               </p>
               <ul class="details__info">
-                <li>Created - <span>4 Dec 2020</span></li>
-                <li>Technologies - <span>HTML, CSS</span></li>
-                <li>Role - <span>Frontend</span></li>
+                <li>Date - <span>July-August 2024</span></li>
+                <li>Technologies - <span>TensorFlow, Keras, CNN</span></li>
+                <li>Category - <span>Computer Vision</span></li>
+                <li>
+                  View -
+                  <a
+                    href="https://github.com/nihalmorshed?tab=repositories"
+                    target="_blank"
+                    class="details__link"
+                    >GitHub</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- CV Project 2 -->
+          <div class="work__card mix cv">
+            <img src="assets/img/work-1.webp" alt="" class="work__img" />
+            <h3 class="work__title">Digit Recognition</h3>
+            <span class="work__button"
+              >Details
+              <i class="uil uil-arrow-right work__button-icon"></i>
+            </span>
+            <div class="portfolio__item-details">
+              <h3 class="details__title">Handwritten Digit Recognition System</h3>
+              <p class="details__description">
+                Implemented a Support Vector Classifier, achieving high accuracy on handwritten digit recognition tasks. Successfully trained a model using live-captured photo distributions while utilizing industry-standard Python libraries for comprehensive data visualization.
+              </p>
+              <ul class="details__info">
+                <li>Date - <span>October-December 2023</span></li>
+                <li>Technologies - <span>Python, scikit-learn, SVM</span></li>
+                <li>Category - <span>Computer Vision</span></li>
+                <li>
+                  View -
+                  <a
+                    href="https://github.com/nihalmorshed?tab=repositories"
+                    target="_blank"
+                    class="details__link"
+                    >GitHub</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- ML Project 1 -->
+          <div class="work__card mix ml">
+            <img src="assets/img/work-2.webp" alt="" class="work__img" />
+            <h3 class="work__title">Customer Churn Prediction</h3>
+            <span class="work__button"
+              >Details
+              <i class="uil uil-arrow-right work__button-icon"></i>
+            </span>
+            <div class="portfolio__item-details">
+              <h3 class="details__title">Bank Customer Churn Prediction Using Neural Networks</h3>
+              <p class="details__description">
+                Developed an Artificial Neural Network model using TensorFlow/Keras, achieving 86.4% accuracy for customer churn prediction. Implemented comprehensive data preprocessing including categorical encoding, feature scaling, and balanced dataset splitting.
+              </p>
+              <ul class="details__info">
+                <li>Date - <span>July 2024</span></li>
+                <li>Technologies - <span>TensorFlow, Keras, ANN</span></li>
+                <li>Category - <span>Predictive Machine Learning</span></li>
+                <li>
+                  View -
+                  <a
+                    href="https://github.com/nihalmorshed?tab=repositories"
+                    target="_blank"
+                    class="details__link"
+                    >GitHub</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- ML Project 2 -->
+          <div class="work__card mix ml">
+            <img src="assets/img/work-3.webp" alt="" class="work__img" />
+            <h3 class="work__title">Stock Price Prediction</h3>
+            <span class="work__button"
+              >Details
+              <i class="uil uil-arrow-right work__button-icon"></i>
+            </span>
+            <div class="portfolio__item-details">
+              <h3 class="details__title">Predictive Modeling of Stock Market Trends with LSTM</h3>
+              <p class="details__description">
+                Built a sophisticated stock price prediction model using stacked LSTM networks. Optimized data preprocessing with feature scaling and temporal structuring while creating a multi-layer LSTM architecture with dropout regularization for improved generalization.
+              </p>
+              <ul class="details__info">
+                <li>Date - <span>August 2024</span></li>
+                <li>Technologies - <span>Python, LSTM, TensorFlow</span></li>
+                <li>Category - <span>Predictive Machine Learning</span></li>
                 <li>
                   View -
                   <a
@@ -727,13 +982,13 @@
 
       <!--===== Services =====-->
       <section class="services section" id="services">
-        <h2 data-heading="Services" class="section__title">What I Offer</h2>
+        <h2 data-heading="Expertise" class="section__title">Technical Services</h2>
 
         <div class="services__container container grid">
           <div class="services__content">
             <div>
-              <i class="uil uil-arrow services__icon"></i>
-              <h3 class="services__title">Web <br />Design</h3>
+              <i class="uil uil-window services__icon"></i>
+              <h3 class="services__title">Frontend <br />Development</h3>
               <span class="services__button">
                 View More
                 <i class="uil uil-arrow-right services__button-icon"></i>
@@ -742,37 +997,35 @@
               <div class="services__modal">
                 <div class="services__modal-content">
                   <i class="uil uil-times services__modal-close"></i>
-                  <h3 class="services__modal-title">Web Designer</h3>
+                  <h3 class="services__modal-title">Frontend Development</h3>
                   <p class="services__modal-description">
-                    Services for customers of all sizes, specializing in
-                    creating stylish, modern websites, web services and online
-                    stores.
+                    Building responsive and interactive user interfaces using modern web technologies and frameworks for optimal user experience.
                   </p>
 
                   <ul class="services__modal-serevices grid">
                     <li class="services__modal-service">
                       <i class="uil uil-check-circle services__modal-icon"></i>
                       <p class="services__modal-info">
-                        Designing the UI/UX for the website
+                        React and React Native application development
                       </p>
                     </li>
 
                     <li class="services__modal-service">
                       <i class="uil uil-check-circle services__modal-icon"></i>
-                      <p class="services__modal-info">Web Page Development.</p>
+                      <p class="services__modal-info">Responsive web design with HTML, CSS, JavaScript</p>
                     </li>
 
                     <li class="services__modal-service">
                       <i class="uil uil-check-circle services__modal-icon"></i>
                       <p class="services__modal-info">
-                        Designing the UI/UX for the Mobile Application.
+                        Flutter mobile application development
                       </p>
                     </li>
 
                     <li class="services__modal-service">
                       <i class="uil uil-check-circle services__modal-icon"></i>
                       <p class="services__modal-info">
-                        Designing the UI/UX of the website
+                        UI/UX implementation and optimization
                       </p>
                     </li>
                   </ul>
@@ -783,8 +1036,8 @@
 
           <div class="services__content">
             <div>
-              <i class="uil uil-arrow services__icon"></i>
-              <h3 class="services__title">Ui/UX <br />Design</h3>
+              <i class="uil uil-server services__icon"></i>
+              <h3 class="services__title">Backend <br />Development</h3>
               <span class="services__button">
                 View More
                 <i class="uil uil-arrow-right services__button-icon"></i>
@@ -793,37 +1046,35 @@
               <div class="services__modal">
                 <div class="services__modal-content">
                   <i class="uil uil-times services__modal-close"></i>
-                  <h3 class="services__modal-title">Web Designer</h3>
+                  <h3 class="services__modal-title">Backend Development</h3>
                   <p class="services__modal-description">
-                    Services for customers of all sizes, specializing in
-                    creating stylish, modern websites, web services and online
-                    stores.
+                    Developing robust server-side applications, RESTful APIs, and database solutions with scalable architecture and secure implementations.
                   </p>
 
                   <ul class="services__modal-serevices grid">
                     <li class="services__modal-service">
                       <i class="uil uil-check-circle services__modal-icon"></i>
                       <p class="services__modal-info">
-                        Designing the UI/UX for the website
+                        RESTful API design and development
                       </p>
                     </li>
 
                     <li class="services__modal-service">
                       <i class="uil uil-check-circle services__modal-icon"></i>
-                      <p class="services__modal-info">Web Page Development.</p>
+                      <p class="services__modal-info">Django and ASP.NET Core backend systems</p>
                     </li>
 
                     <li class="services__modal-service">
                       <i class="uil uil-check-circle services__modal-icon"></i>
                       <p class="services__modal-info">
-                        Designing the UI/UX for the Mobile Application.
+                        PostgreSQL and MySQL database management
                       </p>
                     </li>
 
                     <li class="services__modal-service">
                       <i class="uil uil-check-circle services__modal-icon"></i>
                       <p class="services__modal-info">
-                        Designing the UI/UX of the website
+                        Authentication and authorization systems
                       </p>
                     </li>
                   </ul>
@@ -834,8 +1085,8 @@
 
           <div class="services__content">
             <div>
-              <i class="uil uil-edit services__icon"></i>
-              <h3 class="services__title">Branding <br />Design</h3>
+              <i class="uil uil-cloud-upload services__icon"></i>
+              <h3 class="services__title">Cloud & <br />Deployment</h3>
               <span class="services__button">
                 View More
                 <i class="uil uil-arrow-right services__button-icon"></i>
@@ -844,37 +1095,84 @@
               <div class="services__modal">
                 <div class="services__modal-content">
                   <i class="uil uil-times services__modal-close"></i>
-                  <h3 class="services__modal-title">Web Designer</h3>
+                  <h3 class="services__modal-title">Cloud & Deployment</h3>
                   <p class="services__modal-description">
-                    Services for customers of all sizes, specializing in
-                    creating stylish, modern websites, web services and online
-                    stores.
+                    Deploying and managing applications on cloud platforms with CI/CD pipelines, ensuring high availability and optimal performance.
                   </p>
 
                   <ul class="services__modal-serevices grid">
                     <li class="services__modal-service">
                       <i class="uil uil-check-circle services__modal-icon"></i>
                       <p class="services__modal-info">
-                        Designing the UI/UX for the website
+                        AWS cloud infrastructure setup and management
                       </p>
                     </li>
 
                     <li class="services__modal-service">
                       <i class="uil uil-check-circle services__modal-icon"></i>
-                      <p class="services__modal-info">Web Page Development.</p>
+                      <p class="services__modal-info">CI/CD pipeline configuration</p>
                     </li>
 
                     <li class="services__modal-service">
                       <i class="uil uil-check-circle services__modal-icon"></i>
                       <p class="services__modal-info">
-                        Designing the UI/UX for the Mobile Application.
+                        Docker containerization and orchestration
                       </p>
                     </li>
 
                     <li class="services__modal-service">
                       <i class="uil uil-check-circle services__modal-icon"></i>
                       <p class="services__modal-info">
-                        Designing the UI/UX of the website
+                        Application monitoring and optimization
+                      </p>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="services__content">
+            <div>
+              <i class="uil uil-brain services__icon"></i>
+              <h3 class="services__title">AI/ML <br />Engineering</h3>
+              <span class="services__button">
+                View More
+                <i class="uil uil-arrow-right services__button-icon"></i>
+              </span>
+
+              <div class="services__modal">
+                <div class="services__modal-content">
+                  <i class="uil uil-times services__modal-close"></i>
+                  <h3 class="services__modal-title">AI/ML Engineering</h3>
+                  <p class="services__modal-description">
+                    Developing and deploying machine learning models, NLP systems, and AI-powered solutions using cutting-edge frameworks and techniques.
+                  </p>
+
+                  <ul class="services__modal-serevices grid">
+                    <li class="services__modal-service">
+                      <i class="uil uil-check-circle services__modal-icon"></i>
+                      <p class="services__modal-info">
+                        Natural Language Processing and text analysis
+                      </p>
+                    </li>
+
+                    <li class="services__modal-service">
+                      <i class="uil uil-check-circle services__modal-icon"></i>
+                      <p class="services__modal-info">Deep Learning model development with PyTorch/TensorFlow</p>
+                    </li>
+
+                    <li class="services__modal-service">
+                      <i class="uil uil-check-circle services__modal-icon"></i>
+                      <p class="services__modal-info">
+                        LangChain and LangGraph integration
+                      </p>
+                    </li>
+
+                    <li class="services__modal-service">
+                      <i class="uil uil-check-circle services__modal-icon"></i>
+                      <p class="services__modal-info">
+                        Computer Vision and predictive modeling
                       </p>
                     </li>
                   </ul>
@@ -887,9 +1185,9 @@
 
       <!--===== Publications =====-->
       <section class="publications section" id="publications">
-        <h2 data-heading="Research Work" class="section__title">Publications</h2>
+        <h2 data-heading="Research Work" class="section__title" data-aos="fade-up">Publications</h2>
 
-        <div class="publications__container container grid">
+        <div class="publications__container container grid" data-aos="fade-up" data-aos-delay="200">
           <div class="publication__card">
             <div class="publication__header">
               <i class="uil uil-file-alt publication__icon"></i>
@@ -904,6 +1202,193 @@
             </a>
           </div>
 
+        </div>
+      </section>
+
+      <!--===== Certifications & Recognition =====-->
+      <section class="certifications section" id="certifications">
+        <h2 data-heading="Achievements" class="section__title" data-aos="fade-up">Certifications & Recognition</h2>
+
+        <div class="certifications__container container" data-aos="fade-up" data-aos-delay="200">
+          <!-- Technical Certifications -->
+          <div class="certifications__category">
+            <h3 class="certifications__category-title">
+              <i class="uil uil-award certifications__category-icon"></i>
+              Technical Certifications
+            </h3>
+            <div class="certifications__list">
+              <div class="certification__item">
+                <div class="certification__icon-wrapper">
+                  <i class="uil uil-check-circle certification__icon"></i>
+                </div>
+                <div class="certification__content">
+                  <h4 class="certification__title">HackerRank Problem-Solving (Basic) Certification</h4>
+                  <span class="certification__date">January 2024</span>
+                </div>
+              </div>
+
+              <div class="certification__item">
+                <div class="certification__icon-wrapper">
+                  <i class="uil uil-check-circle certification__icon"></i>
+                </div>
+                <div class="certification__content">
+                  <h4 class="certification__title">Python and Statistics for Financial Analysis</h4>
+                  <p class="certification__issuer">The Hong Kong University of Science and Technology via Coursera</p>
+                  <span class="certification__date">November 2020</span>
+                </div>
+              </div>
+
+              <div class="certification__item">
+                <div class="certification__icon-wrapper">
+                  <i class="uil uil-check-circle certification__icon"></i>
+                </div>
+                <div class="certification__content">
+                  <h4 class="certification__title">Introduction to Data Analytics for Business</h4>
+                  <p class="certification__issuer">University of Colorado Boulder via Coursera</p>
+                  <span class="certification__date">September 2020</span>
+                </div>
+              </div>
+
+              <div class="certification__item">
+                <div class="certification__icon-wrapper">
+                  <i class="uil uil-check-circle certification__icon"></i>
+                </div>
+                <div class="certification__content">
+                  <h4 class="certification__title">Digital Product Management: Modern Fundamentals</h4>
+                  <p class="certification__issuer">University of Virginia via Coursera</p>
+                  <span class="certification__date">July 2020</span>
+                </div>
+              </div>
+
+              <div class="certification__item">
+                <div class="certification__icon-wrapper">
+                  <i class="uil uil-check-circle certification__icon"></i>
+                </div>
+                <div class="certification__content">
+                  <h4 class="certification__title">Introduction to Big Data</h4>
+                  <p class="certification__issuer">UC San Diego via Coursera</p>
+                  <span class="certification__date">July 2020</span>
+                </div>
+              </div>
+
+              <div class="certification__item">
+                <div class="certification__icon-wrapper">
+                  <i class="uil uil-check-circle certification__icon"></i>
+                </div>
+                <div class="certification__content">
+                  <h4 class="certification__title">Getting Started with AI using IBM Watson</h4>
+                  <p class="certification__issuer">IBM via Coursera</p>
+                  <span class="certification__date">May 2020</span>
+                </div>
+              </div>
+
+              <div class="certification__item">
+                <div class="certification__icon-wrapper">
+                  <i class="uil uil-check-circle certification__icon"></i>
+                </div>
+                <div class="certification__content">
+                  <h4 class="certification__title">Structuring Machine Learning Projects</h4>
+                  <p class="certification__issuer">DeepLearning.AI via Coursera</p>
+                  <span class="certification__date">July 2020</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Academic and Research Recognition -->
+          <div class="certifications__category">
+            <h3 class="certifications__category-title">
+              <i class="uil uil-trophy certifications__category-icon"></i>
+              Academic & Research Recognition
+            </h3>
+            <div class="certifications__list">
+              <div class="certification__item">
+                <div class="certification__icon-wrapper">
+                  <i class="uil uil-star certification__icon"></i>
+                </div>
+                <div class="certification__content">
+                  <h4 class="certification__title">Certificate of Appreciation for Presenting Research Paper</h4>
+                  <p class="certification__issuer">27th International Conference on Computer and Information Technology (ICCIT) 2024, IEEE Bangladesh Branch</p>
+                  <span class="certification__date">December 2024</span>
+                </div>
+              </div>
+
+              <div class="certification__item">
+                <div class="certification__icon-wrapper">
+                  <i class="uil uil-star certification__icon"></i>
+                </div>
+                <div class="certification__content">
+                  <h4 class="certification__title">Outstanding Achievement in Junior School Certificate Examination 2014</h4>
+                  <p class="certification__issuer">Institute of Engineers, Bangladesh</p>
+                  <span class="certification__date">November 2015</span>
+                </div>
+              </div>
+
+              <div class="certification__item">
+                <div class="certification__icon-wrapper">
+                  <i class="uil uil-star certification__icon"></i>
+                </div>
+                <div class="certification__content">
+                  <h4 class="certification__title">Manarat Foundation Scholarships</h4>
+                  <p class="certification__issuer">Multiple scholarships recognizing academic excellence</p>
+                  <span class="certification__date">2008, 2009</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Competition and Community Participation -->
+          <div class="certifications__category">
+            <h3 class="certifications__category-title">
+              <i class="uil uil-users-alt certifications__category-icon"></i>
+              Competition & Community Participation
+            </h3>
+            <div class="certifications__list">
+              <div class="certification__item">
+                <div class="certification__icon-wrapper">
+                  <i class="uil uil-medal certification__icon"></i>
+                </div>
+                <div class="certification__content">
+                  <h4 class="certification__title">Bdapps National Hackathon 2022</h4>
+                  <p class="certification__issuer">Robi Axiata PLC</p>
+                  <span class="certification__date">May 2022</span>
+                </div>
+              </div>
+
+              <div class="certification__item">
+                <div class="certification__icon-wrapper">
+                  <i class="uil uil-medal certification__icon"></i>
+                </div>
+                <div class="certification__content">
+                  <h4 class="certification__title">Debate Tournament Participations</h4>
+                  <p class="certification__issuer">ACC National Carnival 2018, Rajuk College Intra Debate Tournament V2.0 (7th place in Speaker of the Tournament ranking)</p>
+                  <span class="certification__date">2018</span>
+                </div>
+              </div>
+
+              <div class="certification__item">
+                <div class="certification__icon-wrapper">
+                  <i class="uil uil-medal certification__icon"></i>
+                </div>
+                <div class="certification__content">
+                  <h4 class="certification__title">Mathematical Olympiad Participations</h4>
+                  <p class="certification__issuer">Eastern University Mathematical Olympiad (EUMO) 2018, 11th Bangladesh Mathematical Olympiad 2013</p>
+                  <span class="certification__date">2013, 2018</span>
+                </div>
+              </div>
+
+              <div class="certification__item">
+                <div class="certification__icon-wrapper">
+                  <i class="uil uil-medal certification__icon"></i>
+                </div>
+                <div class="certification__content">
+                  <h4 class="certification__title">Warmth for Everyone 2.0 - Community Service</h4>
+                  <p class="certification__issuer">Scars Foundation - Contributing to winter relief distribution for underprivileged communities</p>
+                  <span class="certification__date">December 2018</span>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 
@@ -947,30 +1432,31 @@
             </div>
           </div>
           <div class="contact__content">
-            <form action="" class="contact__form">
+            <form id="contact-form" class="contact__form">
               <div class="input__container">
-                <input type="text" class="input" name="" />
-                <label for="">Username</label>
-                <span>Username</span>
+                <input type="text" class="input" name="user_name" required />
+                <label for="">Name</label>
+                <span>Name</span>
               </div>
               <div class="input__container">
-                <input type="email" class="input" name="" />
+                <input type="email" class="input" name="user_email" required />
                 <label for="">Email</label>
                 <span>Email</span>
               </div>
               <div class="input__container">
-                <input type="tel" class="input" name="" />
-                <label for="">Phone</label>
-                <span>Phone</span>
+                <input type="text" class="input" name="user_subject" />
+                <label for="">Subject</label>
+                <span>Subject</span>
               </div>
               <div class="input__container textarea">
-                <textarea name="" id="" class="input"></textarea>
+                <textarea name="message" class="input" required></textarea>
                 <label for="">Message</label>
                 <span>Message</span>
               </div>
               <button type="submit" class="button">
                 <i class="uil uil-navigator button__icon"></i>Send Message
               </button>
+              <span class="contact__form-status"></span>
             </form>
           </div>
         </div>
@@ -982,8 +1468,8 @@
         <div class="footer__bg">
           <div class="footer__container container grid">
             <div>
-              <h1 class="footer__title">Nihal</h1>
-              <span class="footer__subtitle">Android developer</span>
+              <h1 class="footer__title">Nihal Morshed</h1>
+              <span class="footer__subtitle">AI/ML Engineer & Full-Stack Developer</span>
             </div>
 
             <ul class="footer__links">
@@ -999,13 +1485,26 @@
             </ul>
             <div class="footer__socials">
               <a
-                href="https://www.facebook.com/"
-                target="blank"
+                href="https://www.linkedin.com/in/nihalmorshed2000/"
+                target="_blank"
                 class="footer__social"
               >
-                <i class="uil uil-facebook-f"></i>
+                <i class="uil uil-linkedin"></i>
               </a>
-              
+              <a
+                href="https://github.com/nihalmorshed"
+                target="_blank"
+                class="footer__social"
+              >
+                <i class="uil uil-github"></i>
+              </a>
+              <a
+                href="https://scholar.google.com/citations?user=1Yzue-8AAAAJ&hl=en"
+                target="_blank"
+                class="footer__social"
+              >
+                <i class="uil uil-graduation-cap"></i>
+              </a>
             </div>
           </div>
           <p class="footer__copy">&#169; Morshed Nihal. All rights reserved</p>
@@ -1020,6 +1519,25 @@
 
     <!--========== SWIPER JS ==========-->
     <script src="assets/js/swiper-bundle.min.js"></script>
+
+    <!--========== EMAILJS ==========-->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script type="text/javascript">
+      (function(){
+        emailjs.init("YOUR_PUBLIC_KEY"); // Replace with your EmailJS public key
+      })();
+    </script>
+
+    <!--========== AOS JS ==========-->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init({
+        duration: 1000,
+        easing: 'ease-in-out',
+        once: true,
+        mirror: false
+      });
+    </script>
 
     <!--========== MAIN JS ==========-->
     <script src="assets/js/main.js"></script>

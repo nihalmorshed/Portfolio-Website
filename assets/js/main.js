@@ -172,4 +172,45 @@ function navHighlighter() {
     });
 }
 
+/*=============== CONTACT FORM ===============*/
+const contactForm = document.getElementById('contact-form');
+const contactFormStatus = document.querySelector('.contact__form-status');
+
+if (contactForm) {
+    contactForm.addEventListener('submit', function(e) {
+        e.preventDefault();
+
+        // Show sending message
+        contactFormStatus.textContent = 'Sending message...';
+        contactFormStatus.style.color = 'var(--skin-color)';
+
+        // EmailJS send function
+        // Replace 'YOUR_SERVICE_ID' and 'YOUR_TEMPLATE_ID' with your actual IDs from EmailJS
+        emailjs.sendForm('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', this)
+            .then(function() {
+                // Show success message
+                contactFormStatus.textContent = 'Message sent successfully!';
+                contactFormStatus.style.color = '#4caf50';
+
+                // Clear form
+                contactForm.reset();
+
+                // Clear status message after 5 seconds
+                setTimeout(() => {
+                    contactFormStatus.textContent = '';
+                }, 5000);
+            }, function(error) {
+                // Show error message
+                contactFormStatus.textContent = 'Failed to send message. Please try again.';
+                contactFormStatus.style.color = '#f44336';
+                console.log('EmailJS Error:', error);
+
+                // Clear status message after 5 seconds
+                setTimeout(() => {
+                    contactFormStatus.textContent = '';
+                }, 5000);
+            });
+    });
+}
+
 /*=============== SHOW SCROLL UP ===============*/
