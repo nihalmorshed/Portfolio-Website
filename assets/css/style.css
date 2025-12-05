@@ -869,6 +869,85 @@ input {
     visibility: visible;
 }
 
+/*===== Publications Section =====*/
+.publications__container{
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 1.8rem;
+    row-gap: 2rem;
+}
+
+.publication__card{
+    background-color: var(--box-color);
+    padding: 2rem;
+    border-radius: .5rem;
+    transition: .3s;
+    border: 1px solid transparent;
+}
+
+.publication__card:hover{
+    border-color: var(--skin-color);
+    transform: translateY(-5px);
+}
+
+.publication__header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: var(--mb-1);
+}
+
+.publication__icon{
+    font-size: 2rem;
+    color: var(--skin-color);
+}
+
+.publication__year{
+    background-color: var(--skin-color);
+    color: var(--title-color);
+    padding: .25rem .75rem;
+    border-radius: .25rem;
+    font-size: var(--small-font-size);
+    font-weight: var(--font-medium);
+}
+
+.publication__title{
+    font-size: var(--h3-font-size);
+    margin-bottom: var(--mb-0-75);
+    color: var(--title-color);
+    line-height: 1.4;
+}
+
+.publication__authors{
+    font-size: var(--small-font-size);
+    color: var(--text-color);
+    margin-bottom: var(--mb-0-5);
+    font-style: italic;
+}
+
+.publication__venue{
+    font-size: var(--small-font-size);
+    color: var(--skin-color);
+    margin-bottom: var(--mb-1);
+    font-weight: var(--font-medium);
+}
+
+.publication__link{
+    display: inline-flex;
+    align-items: center;
+    column-gap: .5rem;
+    color: var(--title-color);
+    font-size: var(--small-font-size);
+    font-weight: var(--font-medium);
+    transition: .3s;
+}
+
+.publication__link:hover{
+    color: var(--skin-color);
+}
+
+.publication__link i{
+    font-size: 1rem;
+}
 
 
 /*===== Testimonial Section =====*/
@@ -1315,6 +1394,10 @@ textarea.input {
         font-size: 1.5rem;
     }
 
+    .publications__container {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
+    }
 
     .contact__container {
         grid-template-columns: 360px;
@@ -1415,6 +1498,10 @@ textarea.input {
         grid-template-columns: 300px;
     }
 
+    .publications__container {
+        grid-template-columns: 1fr;
+    }
+
     .contact__container,
     .work__container {
         grid-template-columns: 300px;
@@ -1448,10 +1535,11 @@ textarea.input {
         row-gap: .5rem;
     }
 
-    .contact__container, 
+    .contact__container,
     .work__container,
     .skills__container,
-    .qualification__container {
+    .qualification__container,
+    .publications__container {
         grid-template-columns: 1fr;
 
     }
