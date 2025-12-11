@@ -1,3 +1,51 @@
+/*=============== SERVICE WORKER REGISTRATION ===============*/
+if ('serviceWorker' in navigator) {
+    window.addEventListener('load', () => {
+        navigator.serviceWorker.register('/sw.js')
+            .then(registration => {
+                console.log('ServiceWorker registered:', registration.scope);
+            })
+            .catch(err => {
+                console.log('ServiceWorker registration failed:', err);
+            });
+    });
+}
+
+/*=============== PRELOADER ===============*/
+const preloader = document.getElementById('preloader');
+
+window.addEventListener('load', () => {
+    if (preloader) {
+        setTimeout(() => {
+            preloader.classList.add('hidden');
+        }, 500);
+    }
+});
+
+/*=============== DARK/LIGHT THEME TOGGLE ===============*/
+const themeToggle = document.getElementById('theme-toggle');
+const body = document.body;
+
+// Check for saved theme preference or default to dark
+const savedTheme = localStorage.getItem('theme');
+if (savedTheme === 'light') {
+    body.classList.add('light-theme');
+}
+
+// Toggle theme on click
+if (themeToggle) {
+    themeToggle.addEventListener('click', () => {
+        body.classList.toggle('light-theme');
+
+        // Save preference to localStorage
+        if (body.classList.contains('light-theme')) {
+            localStorage.setItem('theme', 'light');
+        } else {
+            localStorage.setItem('theme', 'dark');
+        }
+    });
+}
+
 /*=============== SHOW SIDEBAR ===============*/
 const navMenu = document.getElementById('sidebar'),
       navToggle = document.getElementById('nav-toggle'),
@@ -212,5 +260,78 @@ if (contactForm) {
             });
     });
 }
+
+/*=============== SCROLL PROGRESS INDICATOR ===============*/
+const scrollProgress = document.getElementById('scroll-progress');
+
+function updateScrollProgress() {
+    if (!scrollProgress) return;
+
+    const scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+    const scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+    const progress = (scrollTop / scrollHeight) * 100;
+
+    scrollProgress.style.width = progress + '%';
+}
+
+window.addEventListener('scroll', updateScrollProgress);
+
+/*=============== SCROLL UP BUTTON ===============*/
+const scrollUp = document.getElementById('scroll-up');
+
+function showScrollUp() {
+    if (!scrollUp) return;
+
+    if (window.scrollY >= 560) {
+        scrollUp.classList.add('show-scroll');
+    } else {
+        scrollUp.classList.remove('show-scroll');
+    }
+}
+
+window.addEventListener('scroll', showScrollUp);
+
+/*=============== TYPING ANIMATION ===============*/
+const typedTextElement = document.querySelector('.typed-text');
+const textArray = ['AI/ML Engineer', 'Full Stack Developer', 'NLP Researcher', 'Deep Learning Enthusiast', 'Problem Solver'];
+let textArrayIndex = 0;
+let charIndex = 0;
+let isDeleting = false;
+const typingSpeed = 100;
+const deletingSpeed = 50;
+const pauseTime = 2000;
+
+function typeText() {
+    if (!typedTextElement) return;
+
+    const currentText = textArray[textArrayIndex];
+
+    if (isDeleting) {
+        typedTextElement.textContent = currentText.substring(0, charIndex - 1);
+        charIndex--;
+    } else {
+        typedTextElement.textContent = currentText.substring(0, charIndex + 1);
+        charIndex++;
+    }
+
+    let timeout = isDeleting ? deletingSpeed : typingSpeed;
+
+    if (!isDeleting && charIndex === currentText.length) {
+        timeout = pauseTime;
+        isDeleting = true;
+    } else if (isDeleting && charIndex === 0) {
+        isDeleting = false;
+        textArrayIndex = (textArrayIndex + 1) % textArray.length;
+    }
+
+    setTimeout(typeText, timeout);
+}
+
+// Start typing animation when DOM is loaded
+document.addEventListener('DOMContentLoaded', () => {
+    if (typedTextElement) {
+        setTimeout(typeText, 500);
+    }
+});
 
 /*=============== SHOW SCROLL UP ===============*/

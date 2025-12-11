@@ -6,7 +6,7 @@
     /*===== Colors =====*/
     --hue-color:242;
 
-    /* HSL Color Mode */
+    /* HSL Color Mode - Dark Theme (Default) */
     --skin-color: hsl(342, 92%, 46%);
     --title-color: hsl(var(--hue-color), 8%, 95%);
     --text-color: hsl(var(--hue-color), 8%, 85%);
@@ -46,6 +46,133 @@
     --z-modal: 100;
 }
 
+/*=============== LIGHT THEME ===============*/
+body.light-theme {
+    --title-color: hsl(var(--hue-color), 8%, 15%);
+    --text-color: hsl(var(--hue-color), 8%, 35%);
+    --body-color: hsl(var(--hue-color), 19%, 95%);
+    --box-color: hsl(var(--hue-color), 14%, 90%);
+    --scroll-bar-color: hsl(var(--hue-color), 12%, 70%);
+    --scroll-thumb-color: hsl(var(--hue-color), 12%, 55%);
+}
+
+/*=============== THEME TOGGLE BUTTON ===============*/
+.theme-toggle {
+    position: fixed;
+    top: 2rem;
+    right: 1.5rem;
+    width: 44px;
+    height: 44px;
+    background-color: var(--skin-color);
+    border: none;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: var(--z-fixed);
+    transition: .3s;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.theme-toggle:focus {
+    outline: 2px solid var(--title-color);
+    outline-offset: 2px;
+}
+
+.theme-toggle:hover {
+    transform: scale(1.1);
+}
+
+.theme-toggle i {
+    font-size: 1.3rem;
+    color: var(--title-color);
+    transition: .3s;
+}
+
+.theme-toggle .uil-moon {
+    display: none;
+}
+
+body.light-theme .theme-toggle .uil-sun {
+    display: none;
+}
+
+body.light-theme .theme-toggle .uil-moon {
+    display: block;
+}
+
+body.light-theme .home {
+    background-image: url(../img/background\ light.png);
+    background-size: cover;
+    background-position: center center;
+}
+
+body.light-theme .sidebar {
+    background-color: var(--body-color);
+    border-right-color: var(--box-color);
+}
+
+/*=============== PRELOADER ===============*/
+.preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--body-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    transition: opacity 0.5s ease, visibility 0.5s ease;
+}
+
+.preloader.hidden {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.preloader__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.preloader__spinner {
+    width: 50px;
+    height: 50px;
+    border: 4px solid var(--box-color);
+    border-top-color: var(--skin-color);
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
+
+.preloader__text {
+    color: var(--title-color);
+    font-size: var(--normal-font-size);
+    font-weight: var(--font-medium);
+    letter-spacing: 2px;
+}
+
+/*=============== SCROLL PROGRESS INDICATOR ===============*/
+.scroll-progress {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 4px;
+    background: linear-gradient(90deg, var(--skin-color), hsl(342, 92%, 60%));
+    z-index: 1000;
+    transition: width 0.1s ease-out;
+    box-shadow: 0 0 10px var(--skin-color);
+}
+
 /* Responsive Typography */
 @media screen and (max-width: 1024px) {
     :root {
@@ -57,6 +184,27 @@
         --small-font-size: .813rem;
         --smaller-font-size: .75rem;
     }
+}
+
+/*=============== SKIP TO CONTENT ===============*/
+.skip-to-content {
+    position: fixed;
+    top: -100%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: var(--skin-color);
+    color: var(--title-color);
+    padding: 1rem 2rem;
+    border-radius: 0 0 .5rem .5rem;
+    z-index: 10000;
+    font-weight: var(--font-medium);
+    transition: top 0.3s ease;
+}
+
+.skip-to-content:focus {
+    top: 0;
+    outline: 2px solid var(--title-color);
+    outline-offset: 2px;
 }
 
 /*=============== BASE ===============*/
@@ -275,10 +423,23 @@ input {
     background-size: cover;
     background-position: center center;
     height: 100vh;
+    position: relative;
+    overflow: hidden;
+}
+
+/*===== Particles Background =====*/
+.particles-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
 }
 
 .home__container{
     position: relative;
+    z-index: 1;
     height: 100%;
     align-items: center;
 }
@@ -336,6 +497,23 @@ input {
     font-size: var(--h3-font-size);
     font-weight: var(--font-medium);
     margin-bottom: var(--mb-0-75);
+}
+
+/*===== Typing Animation =====*/
+.typed-text {
+    color: var(--skin-color);
+}
+
+.cursor {
+    display: inline-block;
+    color: var(--skin-color);
+    animation: blink 0.7s infinite;
+    margin-left: 2px;
+}
+
+@keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
 }
 
 .home__description{
@@ -1476,21 +1654,47 @@ textarea.input {
 
 
 /*=============== SCROLL UP ===============*/
-::-webit-scrollbar {
+.scrollup {
+    position: fixed;
+    right: 2rem;
+    bottom: -30%;
+    width: 50px;
+    height: 50px;
+    background-color: var(--skin-color);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: var(--z-fixed);
+    transition: .4s;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.scrollup:hover {
+    background-color: hsl(342, 92%, 40%);
+    transform: translateY(-5px);
+}
+
+.scrollup__icon {
+    font-size: 1.5rem;
+    color: var(--title-color);
+}
+
+/* Show Scroll Up */
+.show-scroll {
+    bottom: 3rem;
+}
+
+/*=============== SCROLL BAR ===============*/
+::-webkit-scrollbar {
     width: .60rem;
     background-color: var(--scroll-bar-color);
     border-radius: .5rem;
 }
-::-webit-scrollbar-thumb {
+::-webkit-scrollbar-thumb {
     background-color: var(--scroll-thumb-color);
     border-radius: .5rem;
 }
-
-
-/* Show Scroll Up*/
-
-
-/*=============== SCROLL BAR ===============*/
 
 
 /*========== BREAKPOINTS ==========*/
