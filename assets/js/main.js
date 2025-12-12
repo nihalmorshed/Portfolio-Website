@@ -261,6 +261,32 @@ if (contactForm) {
     });
 }
 
+/*=============== EXPERIENCE MODAL ===============*/
+const experienceBtn = document.querySelector('.experience__button');
+const experienceModal = document.querySelector('.experience__modal');
+const experienceClose = document.querySelector('.experience__modal-close');
+
+if (experienceBtn) {
+    experienceBtn.addEventListener('click', () => {
+        experienceModal.classList.add('active-modal');
+    });
+}
+
+if (experienceClose) {
+    experienceClose.addEventListener('click', () => {
+        experienceModal.classList.remove('active-modal');
+    });
+}
+
+// Close modal when clicking outside
+if (experienceModal) {
+    experienceModal.addEventListener('click', (e) => {
+        if (e.target === experienceModal) {
+            experienceModal.classList.remove('active-modal');
+        }
+    });
+}
+
 /*=============== SCROLL PROGRESS INDICATOR ===============*/
 const scrollProgress = document.getElementById('scroll-progress');
 
@@ -331,6 +357,51 @@ function typeText() {
 document.addEventListener('DOMContentLoaded', () => {
     if (typedTextElement) {
         setTimeout(typeText, 500);
+    }
+});
+
+/*=============== CERTIFICATE LIGHTBOX ===============*/
+const certificateLightbox = document.getElementById('certificate-lightbox');
+const certificateImg = document.getElementById('certificate-img');
+const certificateTitle = document.getElementById('certificate-title');
+const certificateClose = document.getElementById('certificate-close');
+
+// Get all clickable certificate items
+const clickableCertificates = document.querySelectorAll('.certification__item--clickable');
+
+clickableCertificates.forEach(cert => {
+    cert.addEventListener('click', () => {
+        const imgPath = cert.dataset.certificate;
+        const title = cert.dataset.title;
+
+        if (imgPath && certificateLightbox) {
+            certificateImg.src = imgPath;
+            certificateTitle.textContent = title || '';
+            certificateLightbox.classList.add('active');
+        }
+    });
+});
+
+// Close lightbox when clicking close button
+if (certificateClose) {
+    certificateClose.addEventListener('click', () => {
+        certificateLightbox.classList.remove('active');
+    });
+}
+
+// Close lightbox when clicking outside the image
+if (certificateLightbox) {
+    certificateLightbox.addEventListener('click', (e) => {
+        if (e.target === certificateLightbox) {
+            certificateLightbox.classList.remove('active');
+        }
+    });
+}
+
+// Close lightbox with Escape key
+document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && certificateLightbox?.classList.contains('active')) {
+        certificateLightbox.classList.remove('active');
     }
 });
 
