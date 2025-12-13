@@ -882,6 +882,15 @@ input {
     box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
 }
 
+.certificate__lightbox-pdf {
+    width: 80vw;
+    height: 80vh;
+    border: none;
+    border-radius: .5rem;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+    background-color: #fff;
+}
+
 .certificate__lightbox-title {
     color: #fff;
     margin-top: 1rem;

@@ -363,6 +363,7 @@ document.addEventListener('DOMContentLoaded', () => {
 /*=============== CERTIFICATE LIGHTBOX ===============*/
 const certificateLightbox = document.getElementById('certificate-lightbox');
 const certificateImg = document.getElementById('certificate-img');
+const certificatePdf = document.getElementById('certificate-pdf');
 const certificateTitle = document.getElementById('certificate-title');
 const certificateClose = document.getElementById('certificate-close');
 
@@ -371,11 +372,25 @@ const clickableCertificates = document.querySelectorAll('.certification__item--c
 
 clickableCertificates.forEach(cert => {
     cert.addEventListener('click', () => {
-        const imgPath = cert.dataset.certificate;
+        const filePath = cert.dataset.certificate;
         const title = cert.dataset.title;
 
-        if (imgPath && certificateLightbox) {
-            certificateImg.src = imgPath;
+        if (filePath && certificateLightbox) {
+            // Check if the file is a PDF
+            const isPdf = filePath.toLowerCase().endsWith('.pdf');
+
+            if (isPdf) {
+                // Show PDF iframe, hide image
+                certificateImg.style.display = 'none';
+                certificatePdf.style.display = 'block';
+                certificatePdf.src = filePath;
+            } else {
+                // Show image, hide PDF iframe
+                certificatePdf.style.display = 'none';
+                certificateImg.style.display = 'block';
+                certificateImg.src = filePath;
+            }
+
             certificateTitle.textContent = title || '';
             certificateLightbox.classList.add('active');
         }
@@ -386,6 +401,9 @@ clickableCertificates.forEach(cert => {
 if (certificateClose) {
     certificateClose.addEventListener('click', () => {
         certificateLightbox.classList.remove('active');
+        // Clear sources to stop loading
+        certificateImg.src = '';
+        certificatePdf.src = '';
     });
 }
 
@@ -394,6 +412,9 @@ if (certificateLightbox) {
     certificateLightbox.addEventListener('click', (e) => {
         if (e.target === certificateLightbox) {
             certificateLightbox.classList.remove('active');
+            // Clear sources to stop loading
+            certificateImg.src = '';
+            certificatePdf.src = '';
         }
     });
 }
@@ -402,6 +423,9 @@ if (certificateLightbox) {
 document.addEventListener('keydown', (e) => {
     if (e.key === 'Escape' && certificateLightbox?.classList.contains('active')) {
         certificateLightbox.classList.remove('active');
+        // Clear sources to stop loading
+        certificateImg.src = '';
+        certificatePdf.src = '';
     }
 });
 
