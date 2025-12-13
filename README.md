@@ -4,7 +4,7 @@
 
 A comprehensive, modern, responsive portfolio website showcasing AI/ML engineering expertise, research publications, projects, and professional experience. Built with vanilla HTML, CSS, and JavaScript with Progressive Web App (PWA) capabilities.
 
-**Live Website:** [https://nihalmorshed.github.io/](https://nihalmorshed.github.io/)
+**Live Website:** [https://nihalmorshed.github.io/Portfolio-Website](https://nihalmorshed.github.io/Portfolio-Website)
 
 ---
 
