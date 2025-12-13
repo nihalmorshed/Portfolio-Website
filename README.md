@@ -27,9 +27,10 @@ A comprehensive, modern, responsive portfolio website showcasing AI/ML engineeri
 9. [Responsive Design](#responsive-design)
 10. [PWA Features](#pwa-features)
 11. [SEO & Accessibility](#seo--accessibility)
-12. [Customization Guide](#customization-guide)
-13. [Deployment](#deployment)
-14. [Troubleshooting](#troubleshooting)
+12. [Google Analytics 4](#google-analytics-4)
+13. [Customization Guide](#customization-guide)
+14. [Deployment](#deployment)
+15. [Troubleshooting](#troubleshooting)
 
 ---
 
@@ -82,6 +83,7 @@ Portfolio-Website/
 | **Carousels** | Swiper.js |
 | **Filtering** | MixItUp |
 | **Email** | EmailJS |
+| **Analytics** | Google Analytics 4 (GA4) |
 | **Fonts** | Google Fonts (Poppins, Bona Nova SC) |
 | **Deployment** | GitHub Pages with GitHub Actions |
 | **PWA** | Service Worker, Web App Manifest |
@@ -1781,6 +1783,117 @@ Basic offline functionality via service worker caching.
 - Color contrast (dark/light themes)
 - Keyboard navigation support
 - Screen reader friendly structure
+
+---
+
+## Google Analytics 4
+
+### Overview
+
+The website uses Google Analytics 4 (GA4) for visitor tracking and analytics. GA4 provides comprehensive insights including:
+
+- **Total visitors** (all time)
+- **Weekly/Monthly visitors**
+- **Geographic data** (countries, cities)
+- **Device breakdown** (desktop, mobile, tablet)
+- **Traffic sources** (direct, search, social, referral)
+- **Page views and engagement metrics**
+- **Real-time visitor data**
+
+### Setup Instructions
+
+**Location:** `index.html` (Lines 52-66)
+
+```html
+<!--========== GOOGLE ANALYTICS 4 ==========-->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-XXXXXXXXXX');
+</script>
+```
+
+**To activate Google Analytics:**
+
+1. **Create GA4 Property:**
+   - Go to [Google Analytics](https://analytics.google.com/)
+   - Sign in with your Google account
+   - Click "Admin" (gear icon)
+   - Click "Create Property"
+   - Enter property name: "Nihal Morshed Portfolio"
+   - Select your timezone and currency
+   - Click "Next" and complete business information
+
+2. **Create Data Stream:**
+   - After creating property, select "Web" as platform
+   - Enter your website URL: `https://nihalmorshed.github.io`
+   - Enter stream name: "Portfolio Website"
+   - Click "Create stream"
+
+3. **Get Measurement ID:**
+   - After creating stream, you'll see your Measurement ID
+   - It looks like: `G-ABC123XYZ`
+   - Copy this ID
+
+4. **Update index.html:**
+   - Open `index.html`
+   - Find `G-XXXXXXXXXX` (appears twice)
+   - Replace both with your actual Measurement ID
+
+```html
+<!-- Before -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+...
+gtag('config', 'G-XXXXXXXXXX');
+
+<!-- After (example) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ABC123XYZ"></script>
+...
+gtag('config', 'G-ABC123XYZ');
+```
+
+5. **Deploy and verify:**
+   - Push changes to GitHub
+   - Wait for deployment
+   - Go to GA4 dashboard > Reports > Realtime
+   - Visit your website in another tab
+   - You should see yourself as an active user
+
+### Viewing Analytics
+
+**Access Dashboard:**
+- Go to [Google Analytics](https://analytics.google.com/)
+- Select your property
+
+**Key Reports:**
+
+| Report | Location | Shows |
+|--------|----------|-------|
+| **Realtime** | Reports > Realtime | Current visitors on site |
+| **User Overview** | Reports > Life cycle > Acquisition > Overview | Total users, new users |
+| **Traffic Sources** | Reports > Life cycle > Acquisition > Traffic acquisition | Where visitors come from |
+| **Pages** | Reports > Life cycle > Engagement > Pages and screens | Most viewed pages |
+| **Demographics** | Reports > User > Demographics | Country, city, language |
+| **Tech** | Reports > User > Tech > Overview | Devices, browsers, OS |
+
+**View Weekly Stats:**
+1. Go to Reports > Life cycle > Acquisition > Overview
+2. In top-right, change date range to "Last 7 days"
+3. View "Users" metric for weekly visitors
+
+**View Total Stats:**
+1. Go to Reports > Life cycle > Acquisition > Overview
+2. In top-right, select custom date range from site launch to today
+3. View "Users" metric for total visitors
+
+### Privacy Considerations
+
+GA4 collects anonymized data by default. For GDPR compliance, consider:
+- Adding a cookie consent banner (optional)
+- Mentioning analytics in a privacy policy
+- GA4 has built-in consent mode features
 
 ---
 
