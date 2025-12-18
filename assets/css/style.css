@@ -724,6 +724,22 @@ input {
     transform: translateX(.25rem);
 }
 
+.experience__certificate {
+    color: var(--skin-color);
+    font-size: var(--smaller-font-size);
+    display: inline-flex;
+    align-items: center;
+    column-gap: .25rem;
+    cursor: pointer;
+    margin-top: var(--mb-0-5);
+    margin-left: 1rem;
+    transition: .3s;
+}
+
+.experience__certificate:hover {
+    color: var(--title-color);
+}
+
 .experience__modal {
     position: fixed;
     top: 0;
@@ -1620,6 +1636,13 @@ input {
     font-size: var(--smaller-font-size);
     color: var(--skin-color);
     font-weight: var(--font-medium);
+}
+
+.certification__credential {
+    display: block;
+    font-size: var(--smaller-font-size);
+    color: var(--text-color);
+    margin-top: .25rem;
 }
 
 
