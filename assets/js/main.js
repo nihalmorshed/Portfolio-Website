@@ -63,6 +63,16 @@ if(navToggle) {
 
 /*===== SIDEBAR HIDDEN =====*/
 /* Validate If Constant Exists */
+/*===== CLOSE SIDEBAR ON NAV LINK CLICK (Mobile) =====*/
+const navLinks = document.querySelectorAll('.nav__link');
+navLinks.forEach(link => {
+	link.addEventListener('click', () => {
+		if(navMenu) {
+			navMenu.classList.remove('show-sidebar')
+		}
+	})
+})
+
 if(navClose) {
 	navClose.addEventListener("click", () => {
 		navMenu.classList.remove('show-sidebar')
@@ -430,3 +440,43 @@ document.addEventListener('keydown', (e) => {
 });
 
 /*=============== SHOW SCROLL UP ===============*/
+
+
+/*=============== BRUTALIST HOVER EFFECTS ===============*/
+// Add subtle offset jitter on hover for cards
+document.querySelectorAll(".work__card, .services__content, .about__box").forEach(card => {
+    card.addEventListener("mouseenter", function() {
+        const jitterX = Math.random() * 2 - 1;
+        const jitterY = Math.random() * 2 - 1;
+        this.style.transform = `translate(calc(-6px + ${jitterX}px), calc(-6px + ${jitterY}px))`;
+    });
+    
+    card.addEventListener("mouseleave", function() {
+        this.style.transform = "";
+    });
+});
+
+/*=============== SKILL BAR ANIMATION ON SCROLL ===============*/
+function initSkillBarAnimation() {
+    const skillBars = document.querySelectorAll(".skills__percentage");
+    
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const width = entry.target.style.width;
+                entry.target.style.width = "0";
+                setTimeout(() => {
+                    entry.target.style.transition = "width 0.8s ease-out";
+                    entry.target.style.width = width;
+                }, 100);
+                observer.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.5 });
+    
+    skillBars.forEach(bar => observer.observe(bar));
+}
+
+// Initialize skill bar animation
+document.addEventListener("DOMContentLoaded", initSkillBarAnimation);
+

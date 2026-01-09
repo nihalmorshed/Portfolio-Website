@@ -144,7 +144,9 @@
     <main class="main">
       <!--===== Home =====-->
       <section class="home" id="home">
-        <div id="particles-js" class="particles-container"></div>
+        <!-- Brutalist geometric accents -->
+        <div class="geometric-accent geometric-accent--line" style="position:absolute;top:15%;left:5%;width:200px;height:4px;background:var(--skin-color);"></div>
+        <div class="geometric-accent geometric-accent--square" style="position:absolute;bottom:10%;right:8%;width:60px;height:60px;background:var(--skin-color);opacity:0.3;"></div>
         <div class="home__container container grid">
           <div class="home__social">
             <span class="home__social-follow"> Follow Me</span>
@@ -1987,64 +1989,6 @@
         easing: 'ease-in-out',
         once: true,
         mirror: false
-      });
-    </script>
-
-    <!--========== PARTICLES JS ==========-->
-    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
-    <script>
-      function initParticles() {
-        const isLightTheme = document.body.classList.contains('light-theme');
-        const particleColor = isLightTheme ? '#1a1a2e' : '#d61355';
-        const lineOpacity = isLightTheme ? 0.4 : 0.2;
-        const particleOpacity = isLightTheme ? 0.7 : 0.5;
-
-        particlesJS('particles-js', {
-          particles: {
-            number: { value: 80, density: { enable: true, value_area: 800 } },
-            color: { value: particleColor },
-            shape: { type: 'circle' },
-            opacity: { value: particleOpacity, random: true },
-            size: { value: 3, random: true },
-            line_linked: {
-              enable: true,
-              distance: 150,
-              color: particleColor,
-              opacity: lineOpacity,
-              width: 1
-            },
-            move: {
-              enable: true,
-              speed: 2,
-              direction: 'none',
-              random: true,
-              straight: false,
-              out_mode: 'out',
-              bounce: false
-            }
-          },
-          interactivity: {
-            detect_on: 'canvas',
-            events: {
-              onhover: { enable: true, mode: 'grab' },
-              onclick: { enable: true, mode: 'push' },
-              resize: true
-            },
-            modes: {
-              grab: { distance: 140, line_linked: { opacity: 0.5 } },
-              push: { particles_nb: 4 }
-            }
-          },
-          retina_detect: true
-        });
-      }
-
-      // Initialize particles
-      initParticles();
-
-      // Re-initialize on theme change
-      document.getElementById('theme-toggle').addEventListener('click', function() {
-        setTimeout(initParticles, 100);
       });
     </script>
 
