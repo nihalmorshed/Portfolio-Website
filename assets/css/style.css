@@ -2731,3 +2731,21 @@ html, body {
         background: none !important;
     }
 }
+
+
+/* Fix: About info box text overflow */
+@media screen and (max-width: 576px) {
+    .about__info {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 0.5rem;
+    }
+
+    .about__box {
+        padding: 0.75rem 0.25rem;
+    }
+
+    .about__title {
+        font-size: 0.65rem;
+        word-break: break-word;
+    }
+}
