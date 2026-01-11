@@ -58,7 +58,7 @@
 
     /*===== Z Index =====*/
     --z-fixed: 10;
-    --z-modal: 100;
+    --z-modal: 9998;
 }
 
 /*=============== LIGHT THEME - Stark white base ===============*/
@@ -2638,5 +2638,88 @@ html, body {
     
     .geometric-accent {
         display: none;
+    }
+}
+
+
+/* Fix: Work filters wrap on mobile */
+@media screen and (max-width: 576px) {
+    .work__filters {
+        flex-wrap: wrap;
+        row-gap: 0.5rem;
+        justify-content: center;
+    }
+
+    .work__item {
+        font-size: var(--small-font-size);
+        padding: .25rem .5rem;
+    }
+}
+
+
+/* Fix: Prevent transform from trapping modal in stacking context */
+.services__content:has(.active-modal) {
+    transform: none !important;
+    box-shadow: none !important;
+}
+
+/* Fallback for browsers without :has() support */
+.services__modal.active-modal {
+    position: fixed;
+    z-index: 9998;
+}
+
+
+/* Fix: Hero buttons stack with proper spacing on mobile */
+@media screen and (max-width: 576px) {
+    .home__buttons {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        width: 100%;
+    }
+
+    .home__buttons .button {
+        width: 100%;
+        justify-content: center;
+    }
+}
+
+
+/* Fix: Hero buttons stack - target correct selector */
+@media screen and (max-width: 576px) {
+    .home__data .button {
+        display: flex;
+        width: 100%;
+        justify-content: center;
+        margin-bottom: 1rem;
+    }
+
+    .home__data .button:last-of-type {
+        margin-bottom: 0;
+    }
+}
+
+
+
+/* Fix: Hero image above content on mobile */
+@media screen and (max-width: 576px) {
+    .home__container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .home__img {
+        display: block;
+        width: 200px;
+        height: auto;
+        margin-bottom: 1.5rem;
+        order: -1;  /* Ensure image appears first */
+    }
+
+    .home__data {
+        order: 1;   /* Content appears after image */
+        width: 100%;
     }
 }

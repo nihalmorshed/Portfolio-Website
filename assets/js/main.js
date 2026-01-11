@@ -146,6 +146,11 @@ const modalViews = document.querySelectorAll('.services__modal'),
     modalCloses = document.querySelectorAll('.services__modal-close');
 
 let modal = function (modalClick) {
+    // Close all modals first
+    modalViews.forEach((modalView) => {
+        modalView.classList.remove('active-modal');
+    });
+    // Then open the clicked one
     modalViews[modalClick].classList.add('active-modal');
 }
 
