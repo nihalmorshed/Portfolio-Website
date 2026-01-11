@@ -2723,3 +2723,11 @@ html, body {
         width: 100%;
     }
 }
+
+
+/* Fix: Fully hide home background on mobile */
+@media screen and (max-width: 576px) {
+    .home {
+        background: none !important;
+    }
+}
